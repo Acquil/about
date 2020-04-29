@@ -7,6 +7,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 /* Tiles */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 .tiles {
   padding: 1em;
   color: white;
@@ -123,7 +124,7 @@
 .tiles article > a:hover {
   color: #ffffff !important;
 }
-.tiles article > a h2, .tiles article > a h3 {
+.tiles article > a h2, .tiles article > a h3, .tiles article > a h4 {
   color: whitesmoke;
   margin: 0;
   text-transform: uppercase;
@@ -312,7 +313,6 @@ html {
 
 body {
   background: #f0f4f4;
-  color: #5b5b5b;
   font-size: 15pt;
   line-height: 1.85em;
   font-family: "Source Sans Pro", sans-serif;
@@ -338,7 +338,6 @@ input, textarea, select {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
-  color: #483949;
   line-height: 1.25em;
 }
 
@@ -1623,8 +1622,6 @@ header.special {
   text-align: center;
 }
 header.special:before, header.special:after {
-  border-bottom: solid 1.5px;
-  border-top: solid 1.5px;
   content: "";
   height: 7px;
   opacity: 0.1;
@@ -2008,7 +2005,7 @@ header .icon.circled {
   background-attachment: fixed;
   color: #fff;
   text-align: center;
-  padding: 7.5em 0 2em 0;
+  padding: 0.85em 3em 0.85em 3em;
   cursor: default;
 }
 #header:before {
@@ -2065,7 +2062,7 @@ header .icon.circled {
   text-align: center;
   font-weight: bolder;
   font-size: 1em;
-  padding: 0.2em;
+  padding: 0.85em 3em 0.85em 3em;
 }
 #header hr {
   top: 1.5em;
@@ -2303,7 +2300,7 @@ body.homepage.is-preload #header:after {
 
 /* Banner */
 #banner {
-  background: #fff;
+  background: rgba(214, 200, 200, 0.103);
   text-align: center;
   padding: 4.5em 0 4.5em 0;
   margin-bottom: 0;
@@ -2933,7 +2930,7 @@ button,
   }
 }
 .datecontainer {
-  background-color: #F05F40;
+  background-color: #5f796b;
   display: inline-block;
   font-weight: 700;
   padding: 0.1em;
@@ -2973,6 +2970,225 @@ button,
 #accordion button {
   font-size: 1em;
   text-decoration: none;
+}
+
+.button-transparent input[type=button],
+.button-transparent input[type=submit],
+.button-transparent input[type=reset],
+.button-transparent button,
+.button-transparent .button {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 1px #fff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.25em;
+}
+.button-transparent input[type=button]:hover,
+.button-transparent input[type=submit]:hover,
+.button-transparent input[type=reset]:hover,
+.button-transparent button:hover,
+.button-transparent .button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+.button-transparent input[type=button].alt,
+.button-transparent input[type=submit].alt,
+.button-transparent input[type=reset].alt,
+.button-transparent button.alt,
+.button-transparent .button.alt {
+  background: none;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+.button-transparent input[type=button].alt:hover,
+.button-transparent input[type=submit].alt:hover,
+.button-transparent input[type=reset].alt:hover,
+.button-transparent button.alt:hover,
+.button-transparent .button.alt:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 1px #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato";
+}
+
+.heading-primary {
+  font-size: 2em;
+  padding: 2em;
+  text-align: center;
+}
+
+.accordion dl,
+.accordion-list {
+  border: 1px solid #ddd;
+}
+.accordion dl:after,
+.accordion-list:after {
+  content: "";
+  display: block;
+  height: 1em;
+  width: 100%;
+  background-color: #261b2c;
+}
+
+.accordion dd,
+.accordion__panel {
+  background-color: #eee;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.accordion p {
+  padding: 1em 2em 1em 2em;
+  color: black;
+}
+
+.accordion {
+  position: relative;
+  background-color: #eee;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2em 0 2em 0;
+}
+
+.accordionTitle,
+.accordion__Heading {
+  background-color: #655361;
+  text-align: center;
+  font-weight: 700;
+  padding: 2em;
+  display: block;
+  color: #fff;
+  transition: background-color 0.5s ease-in-out;
+  border-bottom: 1px solid #574754;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.accordionTitle:before,
+.accordion__Heading:before {
+  content: "+";
+  font-size: 1.5em;
+  line-height: 0.5em;
+  float: left;
+  transition: transform 0.3s ease-in-out;
+}
+.accordionTitle:hover,
+.accordion__Heading:hover {
+  text-decoration: none;
+  background-color: #493c46;
+}
+
+.accordionTitleActive,
+.accordionTitle.is-expanded {
+  background-color: #653d48;
+}
+.accordionTitleActive:before,
+.accordionTitle.is-expanded:before {
+  transform: rotate(-225deg);
+}
+
+.accordionItem {
+  height: auto;
+  overflow: hidden;
+  max-height: 50em;
+  transition: max-height 1s;
+}
+@media screen and (min-width: 48em) {
+  .accordionItem {
+    max-height: 15em;
+    transition: max-height 0.5s;
+  }
+}
+
+.accordionItem.is-collapsed {
+  max-height: 0;
+}
+
+.no-js .accordionItem.is-collapsed {
+  max-height: auto;
+}
+
+.animateIn {
+  animation: accordionIn 0.45s normal ease-in-out both 1;
+}
+
+.animateOut {
+  animation: accordionOut 0.45s alternate ease-in-out both 1;
+}
+
+@keyframes accordionIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) rotateX(-60deg);
+    transform-origin: 50% 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes accordionOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9) rotateX(-60deg);
+  }
+}
+.main {
+  position: relative;
+  margin: 0;
+}
+.main > header {
+  background: #fff;
+  text-align: center;
+  padding: 5em 0 5em 0;
+  margin: 0;
+}
+.main > header h2 {
+  font-size: 2.25em;
+  font-weight: 100;
+  margin-bottom: 0;
+}
+.main > header p {
+  margin: 2em 0 0 0;
+  padding: 0;
+  text-align: center;
+}
+.main > .content {
+  padding: 6em 0 6em 0;
+  color: ghostwhite;
+}
+.main > .content h3 {
+  color: ghostwhite;
+  font-size: 1.5em;
+}
+.main > .content.dark {
+  background: #433;
+}
+.main > .content.bg-style0 {
+  background: url("images/bgtr.svg") top right no-repeat, url("images/bgbl.svg") bottom left no-repeat, url("images/overlay.png"), linear-gradient(45deg, #412e4c, #453a59, #2f394e);
+}
+.main > .content.bg-style1 {
+  background: url("images/bgtr.svg") top right no-repeat, url("images/bgbl.svg") bottom left no-repeat, url("images/bgbl.svg") bottom left no-repeat, url("images/overlay.png"), linear-gradient(45deg, #b39c68, #a56365, #412e4c);
+}
+.main > .content.bg-style2 {
+  background: url("images/bgtr.svg") top right no-repeat, url("images/bgbl.svg") bottom left no-repeat, url("images/overlay.png"), linear-gradient(45deg, #384955, #655361, #85505f);
+}
+.main > .content.bg-style3 {
+  background: url("images/bgtr.svg") top right no-repeat, url("images/bgbl.svg") bottom left no-repeat, url("images/overlay.png"), linear-gradient(45deg, #5f796b, #3a4e59, #2f394e);
+}
+.main > .content.bg-style5 {
+  padding-top: 0;
+  background: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */
