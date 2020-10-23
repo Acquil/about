@@ -1999,7 +1999,7 @@ header .icon.circled {
 /* Header */
 #header {
   position: relative;
-  background-image: url("../../images/building.jpg");
+  background-image: url("../../images/header.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -3190,5 +3190,3 @@ body {
   padding-top: 0;
   background: #fff;
 }
-
-/*# sourceMappingURL=main.css.map */
